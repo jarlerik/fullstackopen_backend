@@ -9,6 +9,7 @@ const persons = require('./persons.json');
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.static('build'));
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -22,8 +23,6 @@ app.use(morgan((tokens, req, res) => [
   tokens['response-time'](req, res), 'ms',
   tokens.content(req),
 ].join(' ')));
-
-// app.use(morgan('tiny'));
 
 app.get('/api/persons', (req, res) => {
   const response = db.findAll();
