@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Arto Hellas",
+    "number": "045-1234567"
+  },
+  {
+    "id": 2,
+    "name": "Arto Järvinen",
+    "number": "041-1231234"
+  },
+  {
+    "id": 3,
+    "name": "Lea Kutvonen",
+    "number": "040-3213210"
+  },
+  {
+    "id": 4,
+    "name": "Martti Tienari",
+    "number": "09-787800"
+  }
+]
