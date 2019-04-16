@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -79,4 +80,6 @@ app.get('/info', (req, res) => {
     <p>${date.toString()}</p>
     `);
 });
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+const env = process.env.ENVIRONMENT;
+app.listen(port, () => console.log(`[${env}] App listening on port ${port}`));
