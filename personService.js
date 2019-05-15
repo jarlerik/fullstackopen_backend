@@ -112,7 +112,7 @@ const create = async ({ name, number }) => {
 
 const update = async ({ id, name, number }) => {
   try {
-    const data = await Person.findByIdAndUpdate(id, { name, number }, { new: true, omitUndefined: true });
+    const data = await Person.findByIdAndUpdate(id, { name, number }, { new: true, omitUndefined: true, runValidators: true });
     return {
       data,
       status: 200,
