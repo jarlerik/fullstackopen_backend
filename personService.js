@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Person = require('./schemas/personSchema');
 const AppError = require('./error');
 
-const password = process.env.MONGO_DB_URI;
+const password = process.env.MONGO_DB_PASSWORD;
 
 const url = `mongodb+srv://fullstackopen:${password}@cluster0-0dslf.mongodb.net/people-app?retryWrites=true`;
 mongoose.connect(url, {
